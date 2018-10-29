@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/ad57b15d/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.2.0/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    
+    
+    <a-scene id="scene-1" environment="preset:default">
+      
+      <a-assets>
+        <img id="forestTexture" src="https://cdn.glitch.com/11fb472b-e6ed-440c-bed9-da27850b83aa%2Fscreenshot-a-frame%20environment%20component-1540278291518.png?1540278405130">
+        <img id="defaultTexture" src="https://cdn.glitch.com/fb197657-4a7a-406a-b00c-11f28c92b92e%2Fscreenshot-a-frame%20environment%20component-1540390447517.png?1540390500659">
+      </a-assets>
+      
+      
+      <!-- Player -->
+      <a-entity id="player" movement-controls="constrainToNavMesh: true" dynamic-body = "shape: box; mass: 0;">
+        <a-entity id="camera"
+                  camera
+                  position="0 1.6 9"
+                  look-controls="pointerLockEnabled: true"
+                  ></a-entity>
+      </a-entity>
+      
+      
+      
+      <a-entity id="portal1" geometry="primitive:plane" rotation="" material="shader:portal;pano:#forestTexture; backgroundColor: #000000; strokeColor: #000000; borderEnabled: 0; side: double" position="1 2.953 0" scale="5.810 8.098 2.128" shadow="" visible="true"></a-entity>
+      
+    
+      
+      
+    </a-scene>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
